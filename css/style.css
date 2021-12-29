@@ -4,8 +4,32 @@
   box-sizing: border-box;
 }
 
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #f0f0f0;
+}
+
 .load {
-  height: 50px;
-  width: 50px;
-  color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.load::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 20px solid #aaa;
+  border-top-color: #2a2;
+  animation: load 1s linear infinite;
+}
+
+@keyframes load {
+  to {
+    transform: rotate(1turn);
+  }
 }
